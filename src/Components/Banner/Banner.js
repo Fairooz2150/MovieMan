@@ -16,7 +16,7 @@ useEffect(() => {
   return (
     <div className='banner'>
        <div className='content'>
-            <h1 className='title'>Movie Name</h1>
+            <h1 className='title'>{movie? movie.title : ""}</h1>
             <div className='buttons'>
                 <button className='button'>Play</button>
                 <button className='button'>My list</button>
