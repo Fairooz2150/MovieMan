@@ -14,7 +14,12 @@
     display: none;
 }
 
-.poster{
+.trending{
     max-height: 250px;
+    margin-right: 10px;
+}
+
+.others{
+    max-height: 200px;
     margin-right: 10px;
 }
