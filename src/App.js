@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import './App.css'
+import { trending,action } from "./urls";
 import Banner from "./Components/Banner/Banner";
 import Movies from "./Components/Movies/Movies";
 function App() {
@@ -9,8 +10,8 @@ function App() {
     <div className="App">
      <Navbar/>
       <Banner/>
-      <Movies title='Trending' />
-      <Movies title='Action' others />
+      <Movies title='Trending' url={trending} />
+      <Movies title='Action' url={action} others />
     </div>
   );
 }
