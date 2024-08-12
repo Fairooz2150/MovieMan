@@ -17,9 +17,15 @@
 .trending{
     max-height: 250px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .others{
     max-height: 200px;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.trending:hover, .others:hover{
+    transform: scale(1.1);
 }
