@@ -21,15 +21,14 @@
     flex: 0 0 30%; /* Adjusts the width of each image container */
 }
 
-.trending, .others {
+.movie {
     width: 100%;  /* Ensures the image takes up the full width of its container */
     height: auto;  /* Maintains the aspect ratio */
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-.poster-container:hover .trending, 
-.poster-container:hover .others {
+.poster-container:hover .movie {
     transform: scale(1.1);
 }
 

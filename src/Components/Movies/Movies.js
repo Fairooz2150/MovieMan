@@ -6,6 +6,7 @@ import axios from '../../axios';
 
 function Movies(props) {
   const [movies, setMovies] = useState([]);
+  const [movieDetails, setMovieDetails] = useState('');
   const [video, setVideo] = useState('');
   const [loading, setLoading] = useState(false); // State for loading GIF
 
@@ -29,7 +30,7 @@ function Movies(props) {
 
   const handleMovie = (id) => {
     setLoading(true); // Set loading to true when starting to load the video
-    console.log('movvieee',movies);
+    console.log('movvieee',movieDetails);
     axios.get(`/movie/${id}/videos?api_key=${API_KEY}`).then(response => {
       console.log(response.data);
       if (response.data.results.length !== 0) {
@@ -52,15 +53,22 @@ function Movies(props) {
       <h2 title='genre'>{props.title}</h2>
       <div className='posters'>
         {movies.map((movie) => (
-          <div className="poster-container" key={movie.id}>
+          <div className="poster-container" key={movie.id} onClick={() => {handleMovie(movie.id)
+              setMovieDetails({
+                title:movie.title || movie.original_title,
+                release: movie.release_date,
+                overview: movie.overview,
+                rating:movie.vote_average
+              }) }
+          } >
             <img 
-              onClick={() => handleMovie(movie.id)} 
-              className={props.others ? 'others' : 'trending'} 
+              
+              className="movie"
               src={`${imageUrl + movie.backdrop_path}`} 
               alt="Poster" 
             />
             <div className="overlay">
-              <h4>{movie.name || movie.title}</h4>
+              <h4>{movie.original_title || movie.title}</h4>
             </div>
           </div>
         ))}
@@ -73,7 +81,16 @@ function Movies(props) {
 
         {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />}
 
-        {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
+        {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} /> }
+  
+        {video &&
+        <div className='Movie-details'>
+        <h2>Title:{movieDetails.original_title || movieDetails.title}</h2>
+        <h4>Release:{movieDetails.release} &nbsp; Rating:{movieDetails.rating}</h4>
+        <h4>Overview: {movieDetails.overview}</h4>
+        </div> }
+
+
       </div>
     </div>
   );
