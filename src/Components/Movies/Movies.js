@@ -29,7 +29,7 @@ function Movies(props) {
 
   const handleMovie = (id) => {
     setLoading(true); // Set loading to true when starting to load the video
-    console.log(id);
+    console.log('movvieee',movies);
     axios.get(`/movie/${id}/videos?api_key=${API_KEY}`).then(response => {
       console.log(response.data);
       if (response.data.results.length !== 0) {
@@ -49,14 +49,24 @@ function Movies(props) {
 
   return (
     <div className='row'>
-      <h2 title='Genre'>{props.title}</h2>
+      <h2 title='genre'>{props.title}</h2>
       <div className='posters'>
-        {movies.map((movie) =>
-          <img onClick={() => handleMovie(movie.id)} className={props.others ? 'others' : 'trending'} src={`${imageUrl + movie.backdrop_path}`} alt="Poster" />
-        )}
+        {movies.map((movie) => (
+          <div className="poster-container" key={movie.id}>
+            <img 
+              onClick={() => handleMovie(movie.id)} 
+              className={props.others ? 'others' : 'trending'} 
+              src={`${imageUrl + movie.backdrop_path}`} 
+              alt="Poster" 
+            />
+            <div className="overlay">
+              <h4>{movie.name || movie.title}</h4>
+            </div>
+          </div>
+        ))}
       </div>
 
-      <div className='video '>
+      <div className='video'>
         {video && <i className="bi bi-x-lg" onClick={() => {
           setVideo('')
         }}> </i>}
@@ -64,7 +74,6 @@ function Movies(props) {
         {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />}
 
         {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
-
       </div>
     </div>
   );
