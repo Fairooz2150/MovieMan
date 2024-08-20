@@ -11,7 +11,7 @@ function App() {
      <Navbar/>
       <Banner/>
       <Movies title='Trending' url={trending} />
-      <Movies title='Action' url={action}  />
+      <Movies title='Action' url={action} />
     </div>
   );
 }
