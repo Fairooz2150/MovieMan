@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import YouTube from 'react-youtube';
 import './Movies.css';
 import { imageUrl, API_KEY } from '../../constants/constants';
@@ -9,6 +9,8 @@ function Movies(props) {
   const [movieDetails, setMovieDetails] = useState('');
   const [video, setVideo] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showLeftButton, setShowLeftButton] = useState(false); // State to show/hide the left button
+  const rowRef = useRef(null);
 
   useEffect(() => {
     axios.get(props.url).then(response => {
@@ -43,31 +45,53 @@ function Movies(props) {
     setLoading(false);
   };
 
+  const scrollRight = () => {
+    rowRef.current.scrollBy({ left: 500, behavior: 'smooth' });
+    setShowLeftButton(true);
+  };
+
+  const scrollLeft = () => {
+    rowRef.current.scrollBy({ left: -500, behavior: 'smooth' });
+    if (rowRef.current.scrollLeft <= 500) {
+      setShowLeftButton(false);
+    }
+  };
+
   return (
     <div className='row'>
       <h2 title='genre'>{props.title}</h2>
-      <div className='posters'>
-        {movies.map((movie) => (
-          <div className="poster-container" key={movie.id} onClick={() => {
-              handleMovie(movie.id);
-              setMovieDetails({
-                title: movie.title || movie.original_title,
-                release: movie.release_date,
-                overview: movie.overview,
-                rating: movie.vote_average
-              });
-            }}
-          >
-            <img 
-              className="movie"
-              src={`${imageUrl + movie.backdrop_path}`} 
-              alt="Poster" 
-            />
-            <div className="overlay">
-              <h4>{movie.original_title || movie.title}</h4>
+      <div className='scroll-buttons'>
+        {showLeftButton && (
+          <button className='scroll-button left' onClick={scrollLeft}>
+            <i class="bi bi-arrow-left-circle-fill"></i>
+          </button>
+        )}
+        <div className='posters' ref={rowRef}>
+          {movies.map((movie) => (
+            <div className="poster-container" key={movie.id} onClick={() => {
+                handleMovie(movie.id);
+                setMovieDetails({
+                  title: movie.title || movie.original_title,
+                  release: movie.release_date,
+                  overview: movie.overview,
+                  rating: movie.vote_average
+                });
+              }}
+            >
+              <img 
+                className="movie"
+                src={`${imageUrl + movie.backdrop_path}`} 
+                alt="Poster" 
+              />
+              <div className="overlay">
+                <h4>{movie.original_title || movie.title}</h4>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <button className='scroll-button right' onClick={scrollRight}>
+        <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
       </div>
 
       <div className='video'>

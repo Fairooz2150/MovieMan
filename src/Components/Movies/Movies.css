@@ -1,6 +1,38 @@
 .row {
     margin-left: 20px;
     color: white;
+    position: relative;
+}
+
+.scroll-buttons {
+    position: relative;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: x-large;
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+.scroll-button:hover {
+    box-shadow: 0 0 16px rgba(98, 13, 13, 0.888); /* Green-yellow shadow on hover */
+}
+
+
+.scroll-button.left {
+    left: 5px;
+}
+
+.scroll-button.right {
+    right: 5px;
 }
 
 .posters {
@@ -8,6 +40,7 @@
     padding: 20px;
     overflow-x: scroll;
     overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 .posters::-webkit-scrollbar {
