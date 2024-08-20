@@ -20,7 +20,6 @@ const opts = {
   width: '100%',
   playerVars: {
     autoplay: 1,
-   
   },
 }
 
@@ -48,17 +47,17 @@ const handleMovie = (id) => {
        <div style={{backgroundImage: `url(${movie? imageUrl+movie.backdrop_path : ""})` }} 
      className='bannerImage' >
        <div className='content'>
-            <h1 className='title'>{movie? movie.title : "New Movie"}</h1>
+            <h1 className='title' title='Movie Name'>{movie? movie.title : "New Movie"}</h1>
             <div className='buttons'>
-                <button className='button' onClick={()=>handleMovie(movie.id)} >Play  <i className="bi bi-play-btn-fill "></i></button>
+                <button className='button' title='Play' onClick={()=>handleMovie(movie.id)} >Play  <i className="bi bi-play-btn-fill "></i></button>
             </div>
-          <h1 className='description'>{movie ? movie.overview : "Loading..." }</h1>
+          <h1 className='description' title='Overview'>{movie ? movie.overview : "Loading..." }</h1>
        </div>
             <div className="fade"></div>
       
     </div>
     <div className='video '>
-    { video && <i className="bi bi-x-lg" onClick={()=>{
+    { video && <i className="bi bi-x-lg" title='close' onClick={()=>{
       setVideo('')
     }}> </i> }
     
@@ -70,7 +69,7 @@ const handleMovie = (id) => {
    
     </div>
    
-  )
+  ) 
 }
 
 export default Banner

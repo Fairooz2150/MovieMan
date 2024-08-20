@@ -30,6 +30,7 @@
 }
 .bi-x-lg{
     cursor: pointer;
+    margin-left: 15px;
 }
 .bi-x-lg:hover{
     color: #6b6a6a;

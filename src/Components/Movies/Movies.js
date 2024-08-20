@@ -49,7 +49,7 @@ function Movies(props) {
 
   return (
     <div className='row'>
-      <h2>{props.title}</h2>
+      <h2 title='Genre'>{props.title}</h2>
       <div className='posters'>
         {movies.map((movie) =>
           <img onClick={() => handleMovie(movie.id)} className={props.others ? 'others' : 'trending'} src={`${imageUrl + movie.backdrop_path}`} alt="Poster" />
