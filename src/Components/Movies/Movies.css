@@ -19,6 +19,12 @@
     margin-right: 10px;
     cursor: pointer;
 }
+.bi-x-lg{
+    cursor: pointer;
+}
+.bi-x-lg:hover{
+    color: #6b6a6a;
+}
 
 .others{
     max-height: 200px;

@@ -11,6 +11,7 @@
     height: 550px;
     background-repeat: no-repeat;
     position: relative;
+
 }
 
 .content{
@@ -23,6 +24,15 @@
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
+}
+.video{
+    margin-top: 10px;
+}
+.bi-x-lg{
+    cursor: pointer;
+}
+.bi-x-lg:hover{
+    color: #6b6a6a;
 }
 
 .button{

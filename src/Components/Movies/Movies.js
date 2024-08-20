@@ -56,9 +56,16 @@ function Movies(props) {
         )}
       </div>
 
-      {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />} {/* Show loading GIF */}
-      
-      {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />} {/* Hide loading GIF when video is ready */}
+      <div className='video '>
+        {video && <i className="bi bi-x-lg" onClick={() => {
+          setVideo('')
+        }}> </i>}
+
+        {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />}
+
+        {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
+
+      </div>
     </div>
   );
 }
