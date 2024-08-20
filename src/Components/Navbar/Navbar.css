@@ -7,17 +7,12 @@
  padding: 20px;
  display: flex;
  justify-content: space-between;
- background-color: #111;
+ z-index: 999;
+
 }
 
-.logo{
- position: fixed;
- left: 20px;
- width: 80px;
-}
-
-.avatar{
- position: fixed;
- right: 20px;
- width: 35px;
+.logo {
+    position: fixed;
+    left: 20px;
+    width: 140px;
 }

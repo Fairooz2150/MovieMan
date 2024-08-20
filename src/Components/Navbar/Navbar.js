@@ -4,8 +4,7 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <div className='navbar'>
-      <img className='logo' src="/images/netflix-logo.png" alt="Netflix" />
-      <img className='avatar' src="/images/avatar.png" alt="Avatar" />
+      <img className='logo' src="/images/MovieMan-logo.png" alt="Netflix" />
     </div>
   )
 }

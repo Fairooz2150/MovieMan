@@ -34,6 +34,7 @@ function Movies(props) {
           setVideo(response.data.results[0])
         }else{
           console.log('Array is empty!');
+          alert('Not Available')
         }
       })
       
