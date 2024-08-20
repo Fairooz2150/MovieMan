@@ -18,12 +18,12 @@
     position: relative;
     margin-right: 10px;
     cursor: pointer;
-    flex: 0 0 30%; /* Adjusts the width of each image container */
+    flex: 0 0 30%;
 }
 
 .movie {
-    width: 100%;  /* Ensures the image takes up the full width of its container */
-    height: auto;  /* Maintains the aspect ratio */
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
@@ -51,8 +51,25 @@
     opacity: 1;
 }
 
+.video {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.movie-details {
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .bi-x-lg {
     cursor: pointer;
+    margin-left: 15px;
 }
 
 .bi-x-lg:hover {
