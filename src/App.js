@@ -5,6 +5,7 @@ import './App.css'
 import { trending,action,romance,horror,comedy,documentaries } from "./urls";
 import Banner from "./Components/Banner/Banner";
 import Movies from "./Components/Movies/Movies";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
       <Movies title='Horror Essentials' url={horror} />
       <Movies title='Love Stories' url={romance} />
       <Movies title='Uncovering Truths' url={documentaries} />
+      <Footer/>
     </div>
   );
 }
