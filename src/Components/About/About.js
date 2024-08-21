@@ -6,11 +6,13 @@ function About({ onClose }) {
         <div className='about-overlay'>
             <div className='about-content'>
                 <button className='close-btn' onClick={onClose}><i class="bi bi-x-lg"></i></button>
+
                 <h2>About Movie-Man</h2>
                 <p>
                     Welcome to <strong>Movie-Man</strong>, your go-to platform for discovering and enjoying the latest and greatest in cinema. Whether you're looking for trending titles, the latest releases, or upcoming movie sensations, Movie-Man has got you covered.
                 </p>
                 <br />
+                
                 <h3>What We Offer:</h3>
                 <ul>
                     <li><strong>Trending Movies:</strong> Stay up-to-date with what's hot in the movie world.</li>
@@ -18,11 +20,13 @@ function About({ onClose }) {
                     <li><strong>Easy Access to Movie Content:</strong> By simply clicking on any movie poster, get instant access to teasers, trailers, behind-the-scenes (BTS) clips, and comprehensive details such as release dates, ratings, and overviews.</li>
                 </ul>
                 <br />
+                
                 <h3>Developer & Repository:</h3>
                 <p>
                     This project is crafted with love and dedication by <strong> <a href="https://fairooz2150.github.io/Fairooz/" target="_blank" rel="noopener noreferrer">Muhammad Fairooz </a></strong>. You can explore the project and contribute on <a href="https://github.com/Fairooz2150/Movie-Man" target="_blank" rel="noopener noreferrer"><b>GitHub <i class="bi bi-git"></i></b></a>.
                 </p>
                 <br />
+
                 <h3>Connect with Me:</h3>
                 <p>Stay connected through my social profiles:</p>
                 <ul className="social-links">
@@ -39,6 +43,7 @@ function About({ onClose }) {
                         <i class="bi bi-instagram"></i>
                     </a></li>
                 </ul>
+
             </div>
         </div>
     );
