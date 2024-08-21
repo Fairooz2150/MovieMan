@@ -69,19 +69,19 @@ function Movies(props) {
         <div className='posters' ref={rowRef}>
           {movies.map((movie) => (
             <div className="poster-container" key={movie.id} onClick={() => {
-                handleMovie(movie.id);
-                setMovieDetails({
-                  title: movie.title || movie.original_title,
-                  release: movie.release_date,
-                  overview: movie.overview,
-                  rating: movie.vote_average
-                });
-              }}
+              handleMovie(movie.id);
+              setMovieDetails({
+                title: movie.title || movie.original_title,
+                release: movie.release_date,
+                overview: movie.overview,
+                rating: movie.vote_average
+              });
+            }}
             >
-              <img 
+              <img
                 className="movie"
-                src={`${imageUrl + movie.backdrop_path}`} 
-                alt="Poster" 
+                src={`${imageUrl + movie.backdrop_path}`}
+                alt="Poster"
               />
               <div className="overlay">
                 <h4>{movie.original_title || movie.title}</h4>
@@ -90,14 +90,14 @@ function Movies(props) {
           ))}
         </div>
         <button className='scroll-button right' onClick={scrollRight}>
-        <i class="bi bi-arrow-right-circle-fill"></i>
+          <i class="bi bi-arrow-right-circle-fill"></i>
         </button>
       </div>
 
       <div className='video'>
         {video && <i className="bi bi-x-lg" onClick={() => setVideo('')}></i>}
         {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />}
-        {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} /> }
+        {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
 
         {video && (
           <div className='movie-details'>

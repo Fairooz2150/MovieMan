@@ -6,16 +6,16 @@
     display: flex;
     justify-content: space-between;
     z-index: 999;
-  }
-  
-  .logo {
+}
+
+.logo {
     position: fixed;
     left: 20px;
     width: 140px;
     cursor: pointer;
-  }
-  
-  .top-button {
+}
+
+.top-button {
     position: fixed;
     top: 10px;
     left: 50%;
@@ -25,14 +25,13 @@
     background-color: black;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     z-index: 1000;
     opacity: 0.7;
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  .top-button:hover {
+}
+
+.top-button:hover {
     opacity: 1;
-  }
-  
+}

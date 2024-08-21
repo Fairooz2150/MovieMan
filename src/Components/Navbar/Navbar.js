@@ -37,7 +37,7 @@ function Navbar() {
           className='logo'
           src="/images/MovieMan-logo.png"
           alt="MovieMan"
-          onClick={toggleAbout} 
+          onClick={toggleAbout}
         />
       </div>
       {showAbout && <About onClose={toggleAbout} />}

@@ -4,26 +4,25 @@
     padding: 20px;
     position: relative;
     bottom: 0;
-    
-  }
-  
-  .footer p {
+
+}
+
+.footer p {
     margin: 0;
     font-size: 14px;
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
     margin-top: 10px;
-    
-  }
-  
-  .social-icons a {
+
+}
+
+.social-icons a {
     margin: 10px;
     color: white;
-  }
-  
-  .social-icons img {
+}
+
+.social-icons img {
     width: 30px;
     height: 30px;
-  }
-  
+}

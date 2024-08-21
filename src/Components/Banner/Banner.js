@@ -62,7 +62,7 @@ function Banner() {
 
         {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />}
 
-        {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />  }
+        {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
 
       </div>
 

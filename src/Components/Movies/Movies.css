@@ -20,10 +20,13 @@
     cursor: pointer;
     z-index: 2;
     font-size: x-large;
-    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+    transition: box-shadow 0.3s ease;
+    /* Smooth transition for shadow */
 }
+
 .scroll-button:hover {
-    box-shadow: 0 0 16px rgba(98, 13, 13, 0.888); /* Green-yellow shadow on hover */
+    box-shadow: 0 0 16px rgba(98, 13, 13, 0.888);
+    /* Green-yellow shadow on hover */
 }
 
 

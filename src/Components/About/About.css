@@ -9,9 +9,9 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  
-  .about-content {
+}
+
+.about-content {
     background: rgba(84, 6, 6, 0.729);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: white;
@@ -19,11 +19,11 @@
     border-radius: 10px;
     width: 90%;
     max-width: 800px;
-    
+
     position: relative;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -32,29 +32,30 @@
     border: none;
     font-size: 20px;
     cursor: pointer;
-  }
-  
-  h2, h3 {
+}
+
+h2,
+h3 {
     margin-top: 0;
     margin-bottom: 5px;
-  }
-  
-  p, ul {
+}
+
+p,
+ul {
     margin-bottom: 15px;
-  }
-  
-  ul.social-links {
+}
+
+ul.social-links {
     list-style: none;
     padding: 0;
-  }
-  
-  ul.social-links li {
+}
+
+ul.social-links li {
     display: inline;
     margin-right: 10px;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
     color: white;
-  }
-  
+}
