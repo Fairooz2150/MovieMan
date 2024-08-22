@@ -9,7 +9,7 @@ function Movies(props) {
   const [movieDetails, setMovieDetails] = useState('');
   const [video, setVideo] = useState('');
   const [loading, setLoading] = useState(false);
-  const [showLeftButton, setShowLeftButton] = useState(false); // State to show/hide the left button
+  const [showLeftButton, setShowLeftButton] = useState(false);
   const rowRef = useRef(null);
 
   useEffect(() => {
@@ -34,6 +34,7 @@ function Movies(props) {
     axios.get(`/movie/${id}/videos?api_key=${API_KEY}`).then(response => {
       if (response.data.results.length !== 0) {
         setVideo(response.data.results[0]);
+        setLoading(false);
       } else {
         alert('Not Available');
         setLoading(false);
@@ -63,7 +64,7 @@ function Movies(props) {
       <div className='scroll-buttons'>
         {showLeftButton && (
           <button className='scroll-button left' onClick={scrollLeft}>
-            <i class="bi bi-arrow-left-circle-fill"></i>
+            <i className="bi bi-arrow-left-circle-fill"></i>
           </button>
         )}
         <div className='posters' ref={rowRef}>
@@ -90,23 +91,24 @@ function Movies(props) {
           ))}
         </div>
         <button className='scroll-button right' onClick={scrollRight}>
-          <i class="bi bi-arrow-right-circle-fill"></i>
+          <i className="bi bi-arrow-right-circle-fill"></i>
         </button>
       </div>
 
-      <div className='video'>
-        {video && <i className="bi bi-x-lg" onClick={() => setVideo('')}></i>}
-        {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />}
-        {video && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
-
-        {video && (
-          <div className='movie-details'>
-            <h2>Title: {movieDetails.title}</h2>
-            <h4>Release: {movieDetails.release} &nbsp; Rating: {movieDetails.rating}</h4>
-            <p>Overview: {movieDetails.overview}</p>
+      {video && (
+        <div className='video-overlay'>
+          <div className='video-container'>
+            <i className="bi bi-x-lg video-close-button" onClick={() => setVideo('')}></i>
+            {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />}
+            {!loading && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
+            <div className='movie-details'>
+              <h2>Title: {movieDetails.title}</h2>
+              <h4>Release: {movieDetails.release} &nbsp; Rating: {movieDetails.rating}</h4>
+              <p>Overview: {movieDetails.overview}</p>
+            </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
