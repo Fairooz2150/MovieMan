@@ -99,7 +99,7 @@ function Movies(props) {
         <div className='video-overlay'>
           <div className='video-container'>
             <i className="bi bi-x-lg video-close-button" onClick={() => setVideo('')}></i>
-            {loading && <img src="/loading.gif" alt="Loading..." className="loading-gif" />}
+            {loading && <img src={`${process.env.PUBLIC_URL}/loading.gif`}  alt="Loading..." className="loading-gif" />}
             {!loading && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
             <div className='movie-details'>
               <h2>Title: {movieDetails.title}</h2>
