@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+Here's an updated version of the README file that includes a mention of the CSS used in the project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Movie-Man
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+Welcome to **Movie-Man**, your ultimate destination for discovering and enjoying the latest and greatest in cinema. Whether you're interested in trending titles, the latest releases, or upcoming movie sensations, Movie-Man has got you covered.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What We Offer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Trending Movies**: Stay up-to-date with what's hot in the movie world.
+- **Genre-Based Recommendations**: Explore movies across various genres, including **comedy**, **romance**, **action**, **horror**, and **documentaries**.
+- **Easy Access to Movie Content**: Click on any movie poster to access teasers, trailers, behind-the-scenes (BTS) clips, and comprehensive details such as release dates, ratings, and overviews.
 
-### `npm test`
+## Developer & Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is crafted with love and dedication by [**Muhammad Fairooz**](https://fairooz2150.github.io/Fairooz/). You can explore the project and contribute on [**GitHub**](https://github.com/Fairooz2150/Movie-Man).
 
-### `npm run build`
+## Connect with Me
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Stay connected through my social profiles:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [**Personal Website**](https://fairooz2150.github.io/Fairooz/)
+- [**LinkedIn**](https://www.linkedin.com/in/muhammad-fairooz-0b1136268/?trk=public-profile-join-page)
+- [**GitHub**](https://github.com/Fairooz2150)
+- [**Instagram**](https://www.instagram.com/marsh__mell_o/?igsh=MWhwZmI5NDRsMWoxMQ%3D%3D)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+To get started with Movie-Man, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/Fairooz2150/Movie-Man.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Navigate to the project directory:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   cd Movie-Man
+   ```
 
-## Learn More
+3. **Install dependencies:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Start the development server:**
 
-### Code Splitting
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Your local instance of Movie-Man will be available at [http://localhost:3000](http://localhost:3000).
 
-### Analyzing the Bundle Size
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **React**: For building the user interface.
+- **YouTube API**: To embed movie trailers.
+- **Axios**: For making HTTP requests.
+- **CSS**: For styling the application, including custom styles for the banner, video overlays, and movie details.
 
-### Making a Progressive Web App
+## Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Feel free to contribute to the project by submitting issues, feature requests, or pull requests.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
