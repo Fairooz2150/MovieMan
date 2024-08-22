@@ -35,10 +35,11 @@ function Navbar() {
       <div className='navbar'>
         <img
           className='logo'
-          src="/images/MovieMan-logo.png"
+          src={`${process.env.PUBLIC_URL}/images/MovieMan-logo.png`}
           alt="MovieMan"
           onClick={toggleAbout}
         />
+
       </div>
       {showAbout && <About onClose={toggleAbout} />}
 
