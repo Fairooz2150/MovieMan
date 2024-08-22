@@ -1,6 +1,3 @@
-Here's an updated version of the README file that includes a mention of the CSS used in the project:
-
----
 
 # Movie-Man
 
