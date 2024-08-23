@@ -66,7 +66,7 @@ function Banner() {
       {video && (
         <div className='video-overlay'>
           <i className="bi bi-x-lg" title='Close' onClick={() => setVideo('')}></i>
-          {loading && <img src={`${process.env.PUBLIC_URL}/loading.gif`} alt="Loading..." className="loading-gif" />}
+          {loading && <img src='/loading.gif' alt="Loading..." className="loading-gif" />}
           <YouTube opts={opts} videoId={video.key} className='youtube' onReady={onVideoReady} />
           <div className='movie-details'>
             <h2>Title: {movieDetails.title}</h2>
