@@ -13,11 +13,14 @@ function Movies(props) {
   const rowRef = useRef(null);
 
   useEffect(() => {
+    setLoading(true); // Set loading to true when fetching data
     axios.get(props.url).then(response => {
       setMovies(response.data.results);
+      setLoading(false); // Set loading to false when data is fetched
     }).catch(err => {
       console.log(err);
       alert('Network Error');
+      setLoading(false); // Set loading to false on error
     });
   }, [props.url]);
 
@@ -30,20 +33,23 @@ function Movies(props) {
   };
 
   const handleMovie = (id) => {
-    setLoading(true);
+    setLoading(true); // Set loading to true when fetching video data
     axios.get(`/movie/${id}/videos?api_key=${API_KEY}`).then(response => {
       if (response.data.results.length !== 0) {
         setVideo(response.data.results[0]);
-        setLoading(false);
+        setLoading(false); // Set loading to false when video data is fetched
       } else {
         alert('Not Available');
-        setLoading(false);
+        setLoading(false); // Set loading to false if no video is available
       }
+    }).catch(err => {
+      console.log(err);
+      setLoading(false); // Set loading to false on error
     });
   };
 
   const onVideoReady = () => {
-    setLoading(false);
+    setLoading(false); // Set loading to false when video is ready
   };
 
   const scrollRight = () => {
@@ -77,8 +83,7 @@ function Movies(props) {
                 overview: movie.overview,
                 rating: movie.vote_average
               });
-            }}
-            >
+            }}>
               <img
                 className="movie"
                 src={`${imageUrl + movie.backdrop_path}`}
@@ -99,8 +104,8 @@ function Movies(props) {
         <div className='video-overlay'>
           <div className='video-container'>
             <i className="bi bi-x-lg video-close-button" onClick={() => setVideo('')}></i>
-            {loading && <img src={`${process.env.PUBLIC_URL}/loading.gif`}  alt="Loading..." className="loading-gif" />}
-            {!loading && <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />}
+            {loading && <img src={`${process.env.PUBLIC_URL}/loading.gif`} alt="Loading..." className="loading-gif" />}
+            <YouTube opts={opts} videoId={video.key} onReady={onVideoReady} />
             <div className='movie-details'>
               <h2>Title: {movieDetails.title}</h2>
               <h4>Release: {movieDetails.release} &nbsp; Rating: {movieDetails.rating}</h4>

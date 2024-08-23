@@ -15,22 +15,22 @@
     background: rgba(84, 6, 6, 0.729);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     width: 90%;
+    top: 10px;
     max-width: 800px;
-
     position: relative;
 }
 
 .close-btn {
     position: absolute;
-    top: -60px;
-    right: -70px;
+    top: -20px;
+    right: -40px;
     background: none;
     color: white;
     border: none;
-    font-size: 15px;
+    font-size: 10px;
     cursor: pointer;
 }
 .close-btn:hover {

@@ -50,7 +50,7 @@ function Banner() {
   return (
     <div className='banner'>
       <div
-        style={{ backgroundImage: `url(${movie ? imageUrl + movie.backdrop_path : ""})` }}
+        style={{ backgroundImage: `url(${movie ? imageUrl + movie.backdrop_path : "/loading.gif"})` }}
         className='bannerImage'
       >
         <div className='content'>
