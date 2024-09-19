@@ -23,7 +23,7 @@ function About({ onClose }) {
                 
                 <h3>Developer & Repository:</h3>
                 <p>
-                    This project is crafted with love and dedication by <strong> <a href="https://fairooz2150.github.io/Fairooz/" target="_blank" rel="noopener noreferrer">Muhammad Fairooz </a></strong>. You can explore the project and contribute on <a href="https://github.com/Fairooz2150/Movie-Man" target="_blank" rel="noopener noreferrer"><b>GitHub <i class="bi bi-git"></i></b></a>.
+                    This project is crafted with love and dedication by <strong> <a href="https://fairooz2150.github.io/Fairooz/" target="_blank" rel="noopener noreferrer">Muhammad Fairooz </a></strong>. You can explore the project and contribute on <a href="https://github.com/Fairooz2150/MovieMan" target="_blank" rel="noopener noreferrer"><b>GitHub <i class="bi bi-git"></i></b></a>.
                 </p>
                 <br />
 
