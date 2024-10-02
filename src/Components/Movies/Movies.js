@@ -81,7 +81,7 @@ function Movies(props) {
                 title: movie.title || movie.original_title,
                 release: movie.release_date,
                 overview: movie.overview,
-                rating: movie.vote_average
+                rating: movie.vote_average.toFixed(1) 
               });
             }}>
               <img

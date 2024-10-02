@@ -71,7 +71,7 @@ function Banner() {
           <YouTube opts={opts} videoId={video.key} className='youtube' onReady={onVideoReady} />
           <div className='movie-details'>
             <h2>Title: {movieDetails.title}</h2>
-            <h4>Release: {movieDetails.release} &nbsp; Rating: {movieDetails.rating}</h4>
+            <h4>Release: {movieDetails.release} &nbsp; Rating: {movieDetails.rating.toFixed(1) }</h4>
             <p>Overview: {movieDetails.overview}</p>
           </div>
         </div>
